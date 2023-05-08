@@ -1,5 +1,20 @@
-# Container Action Template
+# Uppercase Action
 
-To get started, click the `Use this template` button on this repository [which will create a new repository based on this template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/).
+This action converts a text to uppercase.
 
-For info on how to build your first Container action, see the [toolkit docs folder](https://github.com/actions/toolkit/blob/master/docs/container-action.md).
+## Inputs
+
+### `text`
+
+**Required** The text to be converted to uppercase. ## Outputs
+
+### `uppercase-text`
+
+The text converted to uppercase.
+
+## Example Usage
+
+````yaml
+uses: github-actions-up-and-running/uppercase@v1.0.0 with:
+text: Hello, World! ```
+````

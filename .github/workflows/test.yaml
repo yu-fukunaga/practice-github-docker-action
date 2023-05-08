@@ -1,0 +1,20 @@
+name: "test"
+on:
+  pull_request:
+
+  push:
+    branches:
+      - main
+      - "releases/*"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - id: uppercase
+        uses: ./
+        with:
+          text: "hello world!"
+      - name: Print converted text
+        run: echo "${{ steps.uppercase.outputs.uppercase-text }}"
